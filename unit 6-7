@@ -1,0 +1,149 @@
+#exercise 6.1
+my_list = ['hello', 'my', 'name', 'is', 'prachya']
+
+# ลูปฟอร์
+for x in my_list:
+  print(x)
+_______________________________
+my_numbers = [100, 90, 80, 70, 60, 50, 40, 30, 20, 10]
+
+# ลูปฟอร์
+for number in my_numbers:
+    print(number+10)
+______________________________
+#exercise 6.2
+for i in range(1,21):
+  print(i*2)
+_____________________________
+# วนลูปค่า index i จาก 100 จนถึง 10
+for i in range(100,9,-1):
+    # พิมพ์ค่า i / 10 ออกมาทางหน้าจอ
+    print(i/10)
+_____________________________
+student_heights = [163.5, 150.0, 167.0, 161.25, 170.0]
+
+for i in range(len(student_heights)):
+    print(0,len(student_heights) - 1)
+______________________________
+for m in range(1,13):
+  print('3 X',m,'=',3*m)
+_____________________________
+#exercise6.3
+for m in range(2,13):
+  print('Multiplication of', m)
+  for i in range(2,13):
+    print(m, '*', i, '=', m * i)
+  print()
+___________________________
+for m in range(1,9,3):
+    for i in range(m,m+3):
+        print(i,end='     ')
+    print()
+__________________________
+for m in range(1,11):
+    for i in range(1,m):
+        print(i,end='')
+    print()
+    m=m+1
+_________________________
+#excercise 6.4
+for m in range(4,10):
+    if m%3 == 0:break
+print(m)
+________________________
+for m in range(4,10):
+    if m%3 == 0:break
+print(m)
+_______________________
+for m in range(4,10):
+    if m%3 == 0:break
+print(m)
+______________________
+#exercise 7.1
+my_height = 175
+
+if my_height > 170 :
+    print('You are tall.')
+_____________________
+my_salary = 15000
+my_height = 175
+
+if my_salary > 10000 and my_height > 170 :
+    print('You are weathy and tall.')
+____________________
+my_salary = int(input('Enter your salary: '))
+my_height = int(input('Enter your height: '))
+
+if my_salary > 10000 and my_height > 170 :
+    print('You are weathy and tall.')
+___________________
+student_heights = [163.5, 150.0, 167.0, 161.25, 170.0]
+
+for height in student_heights:
+    if height > 160:
+        print(height)
+__________________
+student_names = ['Arm', 'Bobby', 'Cathy', 'Dorothy', 'Emily']
+student_heights = [163.5, 150.0, 167.0, 161.25, 170.0]
+
+for i in range(len(student_names)):
+  if student_names[i][0] != 'A' and student_names[i][0] != 'C' and student_heights[i] > 160:
+    print(student_names[i], student_heights[i])
+_____________________
+#excercise 7.2
+student_names = ['Arm', 'Bobby', 'Cathy', 'Dorothy', 'Emily']
+student_scores = [86, 78, 54, 65, 34]
+
+for i in range(len(student_names)):
+grade = 0
+    if student_scores[i] >= 80:
+        pass  # Add a pass statement or code to execute if the condition is true
+____________________
+3excercise 7.3
+my_numbers = []
+
+# วนลูปตลอดไปจนกว่าจะถูกสั่ง break
+while True:
+    num = int(input('Enter an integer: '))
+
+    # หากค่า num เป็น 0 ให้ออกจากลูปด้วยคำสั่ง break
+    if num == 0:
+        break
+
+    # นำค่า num ไปต่อท้ายลิสต์ my_numbers
+    my_numbers.append(num)
+
+# เรียงลำดับสมาชิกในลิสต์ my_numbers จากมากไปน้อยด้วยคำสั่ง sort
+my_numbers.sort(reverse=True)
+
+print(my_numbers)
+_____________________
+#test 7
+student_names = ['Arm', 'Bobby', 'Cathy', 'Dorothy', 'Emily',  'Boyd', 'Sammy', 'Mary']
+student_scores = [86, 78, 54,74, 65, 62, 34, 51]
+for i in range(len(student_names)):
+  score = student_scores[i]
+  if score >= 80:
+    grade = 4
+  elif score >= 70:
+    grade = 3.5
+  elif score >= 60:
+    grade = 3
+  elif score >= 50:
+    grade = 2.5
+  else:
+    grade = 2
+
+  if grade < 4:
+    if grade < 1.5:
+      print(student_names[i], grade)
+      print("Program stopped.")
+      break
+
+    if grade < 2.5:
+      print(student_names[i], grade, "warning")
+    else:
+      print(student_names[i], grade)
+
+    if student_names[i].startswith('B'):
+      print("blacklisted")
